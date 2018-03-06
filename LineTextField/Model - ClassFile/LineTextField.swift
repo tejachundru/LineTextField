@@ -26,12 +26,12 @@ class LineTextField: UITextField,UITextFieldDelegate {
     //LineWidth
     private var lineWidth:CGFloat = 2{
         didSet{
-            self.setNeedsDisplay()
             if isFirstResponder{
                 self.lineColor = activeLineColor
             }else{
                 self.lineColor = inactiveLineColor
             }
+            self.setNeedsDisplay()
         }
     }
     
