@@ -22,6 +22,9 @@ class LineTextField: UITextField,UITextFieldDelegate {
             self.lineColor = inactiveLineColor
         }
     }
+    //Top Label
+    var topLabel:UILabel = UILabel()
+    
     private var lineColor:UIColor = .black
     //LineWidth
     private var lineWidth:CGFloat = 2{
@@ -66,11 +69,25 @@ class LineTextField: UITextField,UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        topLabel.frame = CGRect(x: 0, y: self.bounds.minY - 40, width: self.bounds.width, height: 40)
+        topLabel.text = self.placeholder
+        if self.text == "" {
+            self.topLabel.alpha = 0.0
+            self.addSubview(topLabel)
+        }
+        UIView.animate(withDuration: 0.5) {
+            self.topLabel.alpha = 1.0
+        }
         self.lineWidth = 4
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.lineWidth = 2
+        if self.text == "" {
+            topLabel.removeFromSuperview()
+        }
+        
     }
     
     override func draw(_ rect: CGRect)
