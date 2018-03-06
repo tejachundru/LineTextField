@@ -12,6 +12,7 @@
 		1B9D676C204E9A8D00DBFBB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9D676A204E9A8D00DBFBB7 /* Main.storyboard */; };
 		1B9D676E204E9A8D00DBFBB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B9D676D204E9A8D00DBFBB7 /* Assets.xcassets */; };
 		1B9D6771204E9A8D00DBFBB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B9D676F204E9A8D00DBFBB7 /* LaunchScreen.storyboard */; };
+		1B9D6779204E9B7E00DBFBB7 /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9D6778204E9B7E00DBFBB7 /* LineTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1B9D676D204E9A8D00DBFBB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B9D6770204E9A8D00DBFBB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B9D6772204E9A8D00DBFBB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B9D6778204E9B7E00DBFBB7 /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +59,20 @@
 				1B9D6766204E9A8D00DBFBB7 /* AppDelegate.swift */,
 				1B9D6768204E9A8D00DBFBB7 /* ViewController.swift */,
 				1B9D676A204E9A8D00DBFBB7 /* Main.storyboard */,
+				1B9D677A204E9BB900DBFBB7 /* Model - ClassFile */,
 				1B9D676D204E9A8D00DBFBB7 /* Assets.xcassets */,
 				1B9D676F204E9A8D00DBFBB7 /* LaunchScreen.storyboard */,
 				1B9D6772204E9A8D00DBFBB7 /* Info.plist */,
 			);
 			path = LineTextField;
+			sourceTree = "<group>";
+		};
+		1B9D677A204E9BB900DBFBB7 /* Model - ClassFile */ = {
+			isa = PBXGroup;
+			children = (
+				1B9D6778204E9B7E00DBFBB7 /* LineTextField.swift */,
+			);
+			path = "Model - ClassFile";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B9D6769204E9A8D00DBFBB7 /* ViewController.swift in Sources */,
+				1B9D6779204E9B7E00DBFBB7 /* LineTextField.swift in Sources */,
 				1B9D6767204E9A8D00DBFBB7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

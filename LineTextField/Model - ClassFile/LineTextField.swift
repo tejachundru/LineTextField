@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class LineTextField: UITextField,UITextFieldDelegate {
     
     //Active Line Color
@@ -46,6 +47,9 @@ class LineTextField: UITextField,UITextFieldDelegate {
         }
     }
     
+    let path = UIBezierPath()
+    
+    
     func updateLeftImage(){
         
         if let image = leftViewImage{
@@ -72,13 +76,12 @@ class LineTextField: UITextField,UITextFieldDelegate {
     override func draw(_ rect: CGRect)
     {
         delegate = self
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: 0, y: self.bounds.maxY))
-        path.addLine(to: CGPoint(x: self.bounds.maxX, y: self.bounds.maxY))
-        path.close()
-        path.lineWidth = self.lineWidth
+        self.path.move(to: CGPoint(x: 0, y: self.bounds.maxY))
+        self.path.addLine(to: CGPoint(x: self.bounds.maxX, y: self.bounds.maxY))
+        self.path.close()
+        self.path.lineWidth = self.lineWidth
         lineColor.setStroke()
-        path.stroke()
+        self.path.stroke()
     }
     
 }
