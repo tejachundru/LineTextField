@@ -50,8 +50,7 @@ class LineTextField: UITextField,UITextFieldDelegate {
         }
     }
     
-    let path = UIBezierPath()
-    
+    private let path = UIBezierPath()
     
     func updateLeftImage(){
         
@@ -93,12 +92,12 @@ class LineTextField: UITextField,UITextFieldDelegate {
     override func draw(_ rect: CGRect)
     {
         delegate = self
-        self.path.move(to: CGPoint(x: 0, y: self.bounds.maxY))
-        self.path.addLine(to: CGPoint(x: self.bounds.maxX, y: self.bounds.maxY))
-        self.path.close()
-        self.path.lineWidth = self.lineWidth
-        lineColor.setStroke()
-        self.path.stroke()
+            self.path.move(to: CGPoint(x: 0, y: self.bounds.maxY))
+            self.path.addLine(to: CGPoint(x: self.bounds.maxX, y: self.bounds.maxY))
+            self.path.close()
+            self.path.lineWidth = self.lineWidth
+            lineColor.setStroke()
+            self.path.stroke()
     }
     
 }
